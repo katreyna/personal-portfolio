@@ -365,24 +365,6 @@ nav {
 .about-link:hover { color: white; }
 .about-link:hover::after { width: 100%; }
 
-@media (max-width: 640px) {
-    .about-card {
-        grid-template-columns: 1fr;
-    }
-    .about-photo-wrap {
-        min-height: 240px;
-    }
-    .about-photo-fade {
-        background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.6) 100%);
-    }
-    .about-body {
-        padding: 28px 24px;
-    }
-}
-
-
-
-
 .status-badge {
     position: fixed;
     top: 40px;
@@ -981,43 +963,220 @@ nav {
     display: none;
 }
 
-/* mobile res */
+/* ── mobile res ── */
 
+/* ── 900px: project grid ── */
 @media (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
+/* ── 768px: general layout ── */
 @media (max-width: 768px) {
-    nav {
-        padding: 20px 30px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .small-text {
-        font-size: 12px;
-    }
 
-    .cursor, .cursor-follower {
-        display: none;
-    }
+  /* NAV — shrink pill, tighten gaps */
+  nav {
+    padding: 14px 20px;
+    gap: 0;
+    width: calc(100vw - 32px);
+    min-width: unset;
+    top: 16px;
+  }
 
-    body {
-        cursor: auto;
-    }
+  .nav-links {
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .status-badge {
-        top: 40px;
-        right: 5px;
-        font-size: 8px;
-        padding: 10px 20px;
-    }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
 
-    #projects {
-        padding: 120px 24px 60px;
-    }
+  /* STATUS BADGE */
+  .status-badge {
+    top: auto;
+    bottom: 24px;
+    right: 16px;
+    left: auto;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  /* HERO — tighten vertical rhythm */
+  section {
+    padding: 100px 24px 60px;
+  }
+
+  .kat,
+  .reynosa {
+    font-size: clamp(60px, 18vw, 120px);
+    letter-spacing: -3px;
+  }
+
+  .name-stack {
+    margin-bottom: 24px;
+  }
+
+  .small-text,
+  .link-small-text,
+  .dash {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+  }
+
+  .scroll-indicator {
+    font-size: 10px;
+    bottom: 24px;
+  }
+
+  /* ABOUT CARD — single column */
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrap {
+    min-height: 240px;
+  }
+
+  .about-photo-fade {
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+  }
+
+  .about-body {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .about-bio {
+    font-size: 13px;
+  }
+
+  /* PROJECTS */
+  #projects {
+    padding: 100px 16px 60px;
+  }
+
+  .projects-grid {
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .project-card {
+    padding: 20px 20px 0 20px;
+    border-radius: 12px;
+  }
+
+  .project-title {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+
+  .project-desc {
+    font-size: 12px;
+  }
+
+  .project-screenshot {
+    height: 180px;
+  }
+
+  /* EXPERIENCE */
+  #experience {
+    padding: 80px 16px 60px;
+  }
+
+  .exp-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .exp-meta-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-right {
+    text-align: left;
+  }
+
+  .exp-title {
+    font-size: clamp(15px, 4vw, 20px);
+  }
+
+  .exp-bullets li {
+    font-size: 12px;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 80px 24px 60px;
+  }
+
+  .contact-email {
+    font-size: clamp(22px, 6vw, 40px);
+    letter-spacing: -0.5px;
+    text-align: center;
+    word-break: break-all;
+  }
+
+  .contact-text {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  /* HIDE CUSTOM CURSOR */
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
+
+/* ── 480px: extra small phones ── */
+@media (max-width: 480px) {
+
+  nav {
+    padding: 12px 16px;
+    top: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .kat,
+  .reynosa {
+    font-size: clamp(52px, 19vw, 90px);
+    letter-spacing: -2px;
+  }
+
+  .about-photo-wrap {
+    min-height: 200px;
+  }
+
+  .project-screenshot {
+    height: 150px;
+  }
+
+  .carousel-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+
+  .status-badge {
+    font-size: 9px;
+    padding: 8px 12px;
+    bottom: 16px;
+    right: 12px;
+  }
 }
