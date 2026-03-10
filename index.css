@@ -235,6 +235,21 @@ nav {
   margin-top: 10px;
   font-size: 20px;
 }  
+
+/* =============================================
+   SCROLL-TRIGGERED HEADING REVEAL
+   ============================================= */
+
+.reveal-heading {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
     
 /* about me */
 
@@ -480,7 +495,7 @@ nav {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 28px 28px 0 28px;
+    padding: 28px;
     overflow: hidden;
     cursor: pointer;
     transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -648,16 +663,14 @@ nav {
 .project-link:hover { color: white; }
 .project-link:hover::after { width: 100%; }
 
-/* screenshot — bottom of card, peeks out with no bottom radius */
+/* screenshot — full image, natural height */
 .project-screenshot {
     width: 100%;
-    height: 220px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     margin-top: 20px;
     border: 1px solid rgba(255,255,255,0.1);
-    border-bottom: none;
     flex-shrink: 0;
 }
 
@@ -665,38 +678,38 @@ nav {
 .carousel {
     position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
 
 .carousel-track {
     width: 100%;
-    height: 100%;
     position: relative;
+    /* height is driven by the active image */
 }
 
 .carousel-img {
-    position: absolute;
-    inset: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+    height: auto;
     display: block;
     opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
     filter: brightness(1) saturate(1);
-    transform: scale(1.02);
+    transform: scale(1.01);
+    pointer-events: none;
 }
 
+/* active image sits in flow and sets the container height */
 .carousel-img.active {
     opacity: 1;
     transform: scale(1);
+    position: relative;
+    pointer-events: auto;
 }
 
 .project-card:hover .carousel-img.active {
-    transform: scale(1.03);
     filter: brightness(1.05) saturate(1.1);
 }
 
@@ -757,12 +770,11 @@ nav {
     transform: scale(1.3);
 }
 
-
-
 /* empty/placeholder card */
 .project-card--empty {
     opacity: 0.35;
     border-style: dashed;
+    padding-bottom: 28px;
 }
 
 .project-screenshot--empty {
@@ -770,6 +782,10 @@ nav {
     align-items: center;
     justify-content: center;
     background: rgba(255,255,255,0.02);
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 12px;
+    border: 1px dashed rgba(255,255,255,0.08);
 }
 
 .empty-label {
@@ -880,6 +896,7 @@ nav {
 }
 
 .exp-bullets {
+    color: white;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -963,7 +980,45 @@ nav {
     display: none;
 }
 
-/* ── mobile res ── */
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* mobile res */
 
 /* ── 900px: project grid ── */
 @media (max-width: 900px) {
@@ -995,7 +1050,7 @@ nav {
     letter-spacing: 0.5px;
   }
 
-  /* STATUS BADGE */
+  /* STATUS BADGE — keep readable, don't overlap nav */
   .status-badge {
     top: auto;
     bottom: 24px;
@@ -1068,7 +1123,7 @@ nav {
   }
 
   .project-card {
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     border-radius: 12px;
   }
 
@@ -1080,9 +1135,6 @@ nav {
     font-size: 12px;
   }
 
-  .project-screenshot {
-    height: 180px;
-  }
 
   /* EXPERIENCE */
   #experience {
@@ -1128,14 +1180,16 @@ nav {
     letter-spacing: 1.5px;
   }
 
-  /* HIDE CUSTOM CURSOR */
-  .cursor,
-  .cursor-follower {
-    display: none;
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 24px;
+    text-align: center;
   }
 
-  body {
-    cursor: auto;
+  .footer-links {
+    gap: 20px;
   }
 }
 
@@ -1161,10 +1215,6 @@ nav {
 
   .about-photo-wrap {
     min-height: 200px;
-  }
-
-  .project-screenshot {
-    height: 150px;
   }
 
   .carousel-btn {
