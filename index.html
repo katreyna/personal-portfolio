@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Kat Reynosa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kat Reynosa is a full-stack web developer and CS student based in New Haven, CT, specializing in responsive interfaces and modern web technologies.">
+  <meta property="og:title" content="Kat Reynosa — Full-Stack Developer">
+  <meta property="og:description" content="Full-stack developer & CS student based in New Haven, CT. Currently leading frontend on an ML-powered sports analytics platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/imgs/og-preview.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -43,7 +48,7 @@
         </div>
 
         <div class="about-heading">
-            <div class="name-stack">
+            <div class="name-stack reveal-heading">
                 <span class="kat small">ABOUT</span>
                 <span class="reynosa small">ME</span>
             </div>
@@ -59,12 +64,6 @@
 
             <!-- text block -->
             <div class="about-body">
-
-                <div class="about-tags">
-                    <span class="about-tag">Full-Stack Dev</span>
-                    <span class="about-tag">CS Student</span>
-                    <span class="about-tag">New Haven, CT</span>
-                </div>
 
                 <p class="about-bio">I'm a computer science student focused on full-stack web development, with a strong interest in building applications that are both functional and thoughtfully designed. I enjoy working across the stack — from designing responsive interfaces to building out the backend logic that powers them. Most recently, I've been leading frontend development on a machine learning-powered sports analytics platform, where I've also driven user research and product strategy. Through coursework and team projects, I've built a solid foundation in modern web technologies and collaborative development, and I'm always looking for opportunities to keep growing as a developer.</p>
 
@@ -84,7 +83,7 @@
                         EXPERIENCE
     ----------------------------------------------->
     <section id="experience">
-        <div class="name-stack exp-heading">
+        <div class="name-stack exp-heading reveal-heading">
             <span class="kat small">MY</span>
             <span class="reynosa small">EXPERIENCE</span>
         </div>
@@ -114,18 +113,18 @@
                 </div>
 
                 <ul class="exp-bullets">
-                    <li>Independently maintained and updated an e-commerce catalog of 300+ products across multiple categories.</li>
-                    <li>Implemented product listings, pricing updates, and promotional banners using HTML, CSS, and JavaScript.</li>
-                    <li>Improved visual consistency and product navigation across pages, enhancing the overall customer experience.</li>
-                    <li>Supported consistent online sales growth through site maintenance, product optimization, and UX improvements.</li>
-                    <li>Managed in-person customer experiences, processed transactions, and handled order issues in a fast-paced environment.</li>
+                    <li>Independently maintained and updated an e-commerce catalog of 300+ products across multiple categories, sustaining consistent online sales growth month-over-month.</li>
+                    <li>Implemented product listings, pricing updates, and promotional banners using HTML, CSS, and JavaScript — reducing turnaround time on catalog updates.</li>
+                    <li>Improved visual consistency and product navigation across pages, leading to a measurable improvement in customer browsing experience.</li>
+                    <li>Managed in-person customer experiences, processed transactions, and handled order issues in a fast-paced retail environment.</li>
                 </ul>
                 <a href="https://www.sportsfanship.com/" class="project-link">Live →</a>
 
             </div>
             <div class="project-card-glow"></div>
         </div>
-        <div class="exp-card">
+
+        <div class="exp-card" style="margin-top: 20px;">
             <div class="exp-card-inner">
 
                 <div class="exp-meta-row">
@@ -150,25 +149,22 @@
                 </div>
 
                 <ul class="exp-bullets">
-                    <li>Provide one-on-one and small-group tutoring to undergraduate students across 7 courses spanning web development,
-                        programming, systems, and software design.</li>
-                    <li>Support students with debugging, assignment guidance, exam preparation, and applying best practices in coding and
-                        problem-solving.</li>
-                    <li>Reinforce core concepts in object-oriented programming, database development, computer systems, and software design
-                        principles.</li>
-                    <li>Courses supported: Web Technology, Programming Fundamentals, Computer Systems, Object-Oriented Programming, Web
-                        & Database Development, Software Design & Development, Applied Business Math.</li>
+                    <li>Provide one-on-one and small-group tutoring to undergraduate students across 7 courses spanning web development, programming, systems, and software design.</li>
+                    <li>Support students with debugging, assignment guidance, exam preparation, and applying best practices in coding and problem-solving.</li>
+                    <li>Reinforce core concepts in object-oriented programming, database development, computer systems, and software design principles.</li>
+                    <li>Courses supported: Web Technology, Programming Fundamentals, Computer Systems, Object-Oriented Programming, Web &amp; Database Development, Software Design &amp; Development, Applied Business Math.</li>
                 </ul>
 
             </div>
-
+            <div class="project-card-glow"></div>
+        </div>
     </section>
 
     <!----------------------------------------------
                         PROJECTS
     ----------------------------------------------->
     <section id="projects">
-        <div class="name-stack projects-header">
+        <div class="name-stack projects-header reveal-heading">
             <span class="kat small">RECENT</span>
             <span class="reynosa small">PROJECTS</span>
         </div>
@@ -191,9 +187,10 @@
                         <span class="project-tag">PostgreSQL</span>
                         <span class="project-tag">AWS</span>
                         <span class="project-tag">Docker</span>
+                        <span class="project-tag">Git</span>
                     </div>
                     <h3 class="project-title">NFL Player Performance Prediction</h3>
-                    <p class="project-desc">A machine learning-powered sports analytics platform built for fantasy football players and sports analysts. Leading frontend development — designing the player projections dashboard, filtering controls, and comparison views. Conducted competitive analysis of ESPN, Sleeper, and FantasyPros and drove product marketing strategy.</p>
+                    <p class="project-desc">A machine learning-powered platform built to help new users get familiar with NFL fantasy football through beginner-friendly player insights and projections. Leading both frontend development — designing the player projections dashboard, filtering controls, and comparison views in React — and user research, conducting interviews and usability testing to shape the product experience. Conducted competitive analysis of ESPN, Sleeper, and FantasyPros to identify gaps and drive product and marketing strategy.</p>
                     <div class="project-links">
                     </div>
                     <div class="project-screenshot">
@@ -202,11 +199,11 @@
                                 <img src="/imgs/nfl-preview1.png" alt="NFL dashboard" class="carousel-img active" />
                                 <img src="/imgs/nfl-preview3.png" alt="NFL analytics" class="carousel-img" />
                             </div>
-                            <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-nfl', -1)">&#8249;</button>
-                            <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-nfl', 1)">&#8250;</button>
+                            <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-nfl', -1)" aria-label="Previous">&#8249;</button>
+                            <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-nfl', 1)" aria-label="Next">&#8250;</button>
                             <div class="carousel-dots" id="dots-carousel-nfl">
-                                <span class="carousel-dot active"></span>
-                                <span class="carousel-dot"></span>
+                                <span class="carousel-dot active" onclick="goToSlide('carousel-nfl', 0)"></span>
+                                <span class="carousel-dot" onclick="goToSlide('carousel-nfl', 1)"></span>
                             </div>
                         </div>
                     </div>
@@ -225,6 +222,8 @@
                         <span class="project-tag">JavaScript</span>
                         <span class="project-tag">Node.js</span>
                         <span class="project-tag">MySQL</span>
+                        <span class="project-tag">GCP</span>
+                        <span class="project-tag">Git</span>
                     </div>
                     <h3 class="project-title">Universe</h3>
                     <p class="project-desc">Full-stack social web application built with a 4-person team. Served as primary full-stack contributor and team lead — managing GitHub workflows, code reviews, and technical compatibility. Built dynamic login, signup, and real-time feed features using async JavaScript with modular backend architecture.</p>
@@ -238,12 +237,12 @@
                                 <img src="/imgs/universe-preview2.png" alt="Universe feed" class="carousel-img" />
                                 <img src="/imgs/universe-preview3.png" alt="Universe profile" class="carousel-img" />
                             </div>
-                            <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-universe', -1)">&#8249;</button>
-                            <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-universe', 1)">&#8250;</button>
+                            <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-universe', -1)" aria-label="Previous">&#8249;</button>
+                            <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-universe', 1)" aria-label="Next">&#8250;</button>
                             <div class="carousel-dots" id="dots-carousel-universe">
-                                <span class="carousel-dot active"></span>
-                                <span class="carousel-dot"></span>
-                                <span class="carousel-dot"></span>
+                                <span class="carousel-dot active" onclick="goToSlide('carousel-universe', 0)"></span>
+                                <span class="carousel-dot" onclick="goToSlide('carousel-universe', 1)"></span>
+                                <span class="carousel-dot" onclick="goToSlide('carousel-universe', 2)"></span>
                             </div>
                         </div>
                     </div>
@@ -252,11 +251,12 @@
             </div>
         </div>
     </section>
+
     <!----------------------------------------------
                         CONTACT
     ----------------------------------------------->
     <section id="contact">
-        <div class="name-stack">
+        <div class="name-stack reveal-heading">
             <span class="kat small">CONTACT</span>
             <span class="reynosa small">&nbsp;</span>
         </div>
@@ -271,6 +271,14 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>© 2026 Kat Reynosa</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/kat-reynosa/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/katreyna" target="_blank">Github</a>
+        </div>
+    </footer>
 
    <script src="script.js"></script>
 </body>
