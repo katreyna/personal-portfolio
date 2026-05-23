@@ -207,6 +207,77 @@ nav {
     margin-top: 100px;
 }
 
+.hero-role {
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-location {
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    animation: fadeIn 1.3s ease;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    animation: fadeIn 1.5s ease;
+}
+
+.btn-primary {
+    padding: 14px 32px;
+    background: white;
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    font-family: Google Sans, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary {
+    padding: 14px 32px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    font-family: Google Sans, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -522,7 +593,7 @@ nav {
 
 /* featured card */
 .project-card--featured {
-    border-color: rgba(255, 255, 255, 0.13);
+    border-color: rgba(74, 222, 128, 0.2);
     background: rgba(255, 255, 255, 0.06);
 }
 
@@ -796,6 +867,53 @@ nav {
 }
 
 .project-title--dim { color: #555; }
+
+/* =============================================
+   SKILLS STRIP
+   ============================================= */
+
+.skills-strip {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skills-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 680px;
+}
+
+.skill-item {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
 
 /* =============================================
    EXPERIENCE SECTION
@@ -1190,6 +1308,21 @@ footer p {
 
   .footer-links {
     gap: 20px;
+  }
+
+  /* HERO CTAS */
+  .hero-ctas {
+    gap: 12px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    font-size: 10px;
+  }
+
+  /* SKILLS STRIP */
+  .skills-strip {
+    padding: 40px 24px;
   }
 }
 

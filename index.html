@@ -9,17 +9,18 @@
   <meta property="og:description" content="Full-stack developer & CS student based in New Haven, CT. Currently leading frontend on an ML-powered sports analytics platform.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/imgs/og-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="index.css">
-</head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XWTSYF8NC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7XWTSYF8NC');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XWTSYF8NC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7XWTSYF8NC');
+  </script>
+</head>
 <body>
     <div class="background--custom"></div>
     <nav>
@@ -41,7 +42,12 @@
                 <span class="reynosa">REYNOSA</span>
             </div>
             <div class="located">
-                <p class="small-text">Located in New Haven, CT</p>
+                <p class="hero-role">Full-Stack Developer & CS Graduate</p>
+                <p class="hero-location">New Haven, CT</p>
+                <div class="hero-ctas">
+                    <a href="imgs/kat-reynosa-resume-may2026.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Resume ↓</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch →</a>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">Scroll</div>
@@ -74,19 +80,45 @@
             <!-- text block -->
             <div class="about-body">
 
-                <p class="about-bio">I'm a computer science student focused on full-stack web development, with a strong interest in building applications that are both functional and thoughtfully designed. I enjoy working across the stack, from designing responsive interfaces to building out the backend logic that powers them. Most recently, I've been leading frontend development on a machine learning-powered sports analytics platform, where I'm also leading user research and product strategy. Through coursework and team projects, I've built a solid foundation in modern web technologies and collaborative development, and I'm always looking for opportunities to keep growing as a developer.</p>
+                <div class="about-tags">
+                    <span class="about-tag">React</span>
+                    <span class="about-tag">Python</span>
+                    <span class="about-tag">Node.js</span>
+                    <span class="about-tag">AWS</span>
+                    <span class="about-tag">Figma</span>
+                </div>
+                <p class="about-bio">I'm a computer science student focused on full-stack web development, with a strong interest in building applications that are both functional and thoughtfully designed. I enjoy working across the stack — from designing responsive interfaces to building out the backend logic that powers them.</p>
+                <p class="about-bio">Most recently, I've been leading frontend development on a machine learning-powered sports analytics platform, where I'm also driving user research and product strategy. Through coursework and team projects, I've built a solid foundation in modern web technologies and collaborative development.</p>
 
                 <div class="about-divider"></div>
 
                 <div class="about-links">
-                    <a class="about-link" href="https://www.linkedin.com/in/kat-reynosa/" target="_blank">LinkedIn →</a>
-                    <a class="about-link" href="https://github.com/katreyna" target="_blank">Github →</a>
+                    <a class="about-link" href="https://www.linkedin.com/in/kat-reynosa/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+                    <a class="about-link" href="https://github.com/katreyna" target="_blank" rel="noopener noreferrer">Github →</a>
                 </div>
 
             </div>
 
         </div>
     </section>
+
+    <div class="skills-strip">
+        <p class="skills-label">Technologies</p>
+        <div class="skills-list">
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">TailwindCSS</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">AWS</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">Figma</span>
+            <span class="skill-item">Git</span>
+        </div>
+    </div>
 
     <!----------------------------------------------
                         EXPERIENCE
@@ -96,41 +128,7 @@
             <span class="kat small">MY</span>
             <span class="reynosa small">EXPERIENCE</span>
         </div>
-
-        <div class="exp-card">
-            <div class="exp-card-inner">
-
-                <div class="exp-meta-row">
-                    <div class="exp-role">
-                        <p class="exp-title">Customer Experience &amp; Web Associate</p>
-                        <p class="exp-company">The Sports Fan</p>
-                    </div>
-                    <div class="exp-right">
-                        <p class="exp-date">Nov 2023 – Jan 2025</p>
-                        <p class="exp-location">Milford, CT</p>
-                    </div>
-                </div>
-
-                <div class="exp-divider"></div>
-
-                <div class="exp-tag-row">
-                    <span class="project-tag">HTML</span>
-                    <span class="project-tag">CSS</span>
-                    <span class="project-tag">JavaScript</span>
-                    <span class="project-tag">E-Commerce</span>
-                    <span class="project-tag">UX</span>
-                </div>
-                <ul class="exp-bullets">
-                    <li>Streamlined the digital inventory pipeline by auditing and updating 300+ product entries, ensuring data integrity and pricing accuracy.</li>
-                    <li>Improved visual consistency and product navigation across pages, enhancing the overall customer experience.</li>
-                    <li>Implemented product listings, pricing updates, and promotional banners using HTML, CSS, and basic JavaScript.</li>
-                    <li>Identified and resolved UX bottlenecks, contributing to a period of consistent online revenue growth through improved site performance.</li>
-                </ul>
-                <a href="https://www.sportsfanship.com/" class="project-link">Live →</a>
-            </div>
-            <div class="project-card-glow"></div>
-        </div>
-
+        
         <div class="exp-card" style="margin-top: 20px;">
             <div class="exp-card-inner">
 
@@ -165,6 +163,40 @@
             </div>
             <div class="project-card-glow"></div>
         </div>
+
+        <div class="exp-card" style="margin-top: 20px;">
+            <div class="exp-card-inner">
+
+                <div class="exp-meta-row">
+                    <div class="exp-role">
+                        <p class="exp-title">Customer Experience &amp; Web Associate</p>
+                        <p class="exp-company">The Sports Fan</p>
+                    </div>
+                    <div class="exp-right">
+                        <p class="exp-date">Nov 2023 – Jan 2025</p>
+                        <p class="exp-location">Milford, CT</p>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <div class="exp-tag-row">
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">E-Commerce</span>
+                    <span class="project-tag">UX</span>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Streamlined the digital inventory pipeline by auditing and updating 300+ product entries, ensuring data integrity and pricing accuracy.</li>
+                    <li>Improved visual consistency and product navigation across pages, enhancing the overall customer experience.</li>
+                    <li>Implemented product listings, pricing updates, and promotional banners using HTML, CSS, and basic JavaScript.</li>
+                    <li>Identified and resolved UX bottlenecks, contributing to a period of consistent online revenue growth through improved site performance.</li>
+                </ul>
+                <a href="https://www.sportsfanship.com/" class="project-link">Live →</a>
+            </div>
+            <div class="project-card-glow"></div>
+        </div>
     </section>
 
     <!----------------------------------------------
@@ -183,7 +215,7 @@
                     <div class="project-meta-row">
                         <div class="project-status">
                             <span class="status-pip"></span>
-                            In Progress — Spring 2026
+                            Spring 2026
                         </div>
                     </div>
                     <div class="project-tag-row">
@@ -197,23 +229,29 @@
                         <span class="project-tag">Git</span>
                         <span class="project-tag">Figma</span>
                     </div>
-                    <h3 class="project-title">NFL Player Performance Prediction</h3>
-                    <p class="project-desc">A machine learning-powered platform built to help new users get familiar with NFL fantasy football through beginner-friendly player insights and projections. Leading frontend development: designing the player projections dashboard, filtering controls, and comparison views in Figma and bringing it to life using React and TailwindCSS. Leading user research, conducting interviews and usability testing to shape the product experience. Conducted competitive analysis of ESPN, Sleeper, and FantasyPros to identify gaps and drive product and marketing strategy.</p>
-                    <p class="project-desc">More coming soon!</p>
+                    <h3 class="project-title">PlayerIQ - NFL Fantasy Player Performance Prediction App</h3>
+                    <p class="project-desc">A machine learning-powered platform built to help new users get familiar with NFL fantasy football through beginner-friendly player insights and projections. 
+                        Leading frontend development: designing the player projections dashboard, filtering controls, and comparison views in Figma and bringing it to life using React and TailwindCSS. 
+                        Leading user research, conducting interviews and usability testing to shape the product experience. Conducted competitive analysis of ESPN, Sleeper, and FantasyPros to identify gaps and drive product and marketing strategy.</p>
+                    <p class="project-desc"></p>
                   <div class="project-links">
+                        <a href="https://playeriq.io" class="project-link" target="_blank" rel="noopener noreferrer">Live →</a>
                     </div>
                     <div class="project-screenshot">
                         <div class="carousel" id="carousel-nfl">
                             <div class="carousel-track">
-                                <img src="/imgs/nfl-preview3.png" alt="Dashboard" class="carousel-img active" />
-                                <img src="/imgs/nfl-preview2.png" alt="Player Analytics" class="carousel-img" />
-                                <img src="/imgs/nfl-preview1.png" alt="Player Comparison" class="carousel-img" />
+                                <img src="/imgs/nfl-preview1.png" alt="Dashboard" class="carousel-img active" loading="lazy" />
+                                <img src="/imgs/nfl-preview2.png" alt="Player Analytics" class="carousel-img" loading="lazy" />
+                                <img src="/imgs/nfl-preview3.png" alt="Player Comparison" class="carousel-img" loading="lazy" />
+                                <img src="/imgs/nfl-preview4.png" alt="Player Stats" class="carousel-img" loading="lazy" />
                             </div>
                             <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-nfl', -1)" aria-label="Previous">&#8249;</button>
                             <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-nfl', 1)" aria-label="Next">&#8250;</button>
                             <div class="carousel-dots" id="dots-carousel-nfl">
                                 <span class="carousel-dot active" onclick="goToSlide('carousel-nfl', 0)"></span>
                                 <span class="carousel-dot" onclick="goToSlide('carousel-nfl', 1)"></span>
+                                <span class="carousel-dot" onclick="goToSlide('carousel-nfl', 2)"></span>
+                                <span class="carousel-dot" onclick="goToSlide('carousel-nfl', 3)"></span>
                             </div>
                         </div>
                     </div>
@@ -244,9 +282,9 @@
                     <div class="project-screenshot">
                         <div class="carousel" id="carousel-universe">
                             <div class="carousel-track">
-                                <img src="/imgs/universe-preview.png" alt="Universe landing" class="carousel-img active" />
-                                <img src="/imgs/universe-preview2.png" alt="Universe feed" class="carousel-img" />
-                                <img src="/imgs/universe-preview3.png" alt="Universe profile" class="carousel-img" />
+                                <img src="/imgs/universe-preview.png" alt="Universe landing" class="carousel-img active" loading="lazy" />
+                                <img src="/imgs/universe-preview2.png" alt="Universe feed" class="carousel-img" loading="lazy" />
+                                <img src="/imgs/universe-preview3.png" alt="Universe profile" class="carousel-img" loading="lazy" />
                             </div>
                             <button class="carousel-btn carousel-btn--prev" onclick="moveCarousel('carousel-universe', -1)" aria-label="Previous">&#8249;</button>
                             <button class="carousel-btn carousel-btn--next" onclick="moveCarousel('carousel-universe', 1)" aria-label="Next">&#8250;</button>
@@ -268,11 +306,12 @@
     ----------------------------------------------->
     <section id="contact">
         <div class="name-stack reveal-heading">
-            <span class="kat small">CONTACT</span>
-            <span class="reynosa small">&nbsp;</span>
+            <span class="kat small">LET'S</span>
+            <span class="reynosa small">TALK</span>
         </div>
         <div class="contact-content">
-            <p class="contact-text">Have a project in mind or just want to connect? I'd love to hear from you.</p>
+            <a href="mailto:kathyareynosa@gmail.com" class="contact-email">kathyareynosa@gmail.com</a>
+            <p class="contact-text">Or find me here</p>
             <div class="socials contact-socials">
                 <p class="small-text">
                     <a class="link-small-text" href="https://www.linkedin.com/in/kat-reynosa/">LinkedIn</a>
@@ -286,8 +325,8 @@
     <footer>
         <p>© 2026 Kat Reynosa</p>
         <div class="footer-links">
-            <a href="https://www.linkedin.com/in/kat-reynosa/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/katreyna" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/kat-reynosa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/katreyna" target="_blank" rel="noopener noreferrer">Github</a>
         </div>
     </footer>
 
