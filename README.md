@@ -2,7 +2,7 @@
 
 Personal portfolio site built with vanilla HTML, CSS, and JavaScript. No frameworks or build tools — just fast, clean static files.
 
-**Live:** [katreyna.github.io/personal-portfolio](https://katreyna.github.io/personal-portfolio)
+**Live:** katreynosa.com
 
 ---
 
